@@ -1,0 +1,70 @@
+{
+  "_framework-Bu-avnMx.js": {
+    "file": "portfolio/_next/static/chunks/framework-Bu-avnMx.js",
+    "name": "framework",
+    "imports": [
+      "_rolldown-runtime-DOKJ5Yo2.js"
+    ]
+  },
+  "_rolldown-runtime-DOKJ5Yo2.js": {
+    "file": "portfolio/_next/static/chunks/rolldown-runtime-DOKJ5Yo2.js",
+    "name": "rolldown-runtime"
+  },
+  "node_modules/lucide-react/dist/esm/Icon.mjs": {
+    "file": "portfolio/_next/static/chunks/Icon-BJi-gWJ1.js",
+    "name": "Icon",
+    "src": "node_modules/lucide-react/dist/esm/Icon.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-DOKJ5Yo2.js",
+      "_framework-Bu-avnMx.js"
+    ]
+  },
+  "node_modules/vinext/dist/shims/internal/app-route-prefetch-policy.js": {
+    "file": "portfolio/_next/static/chunks/app-route-prefetch-policy-a4E2XcxO.js",
+    "name": "app-route-prefetch-policy",
+    "src": "node_modules/vinext/dist/shims/internal/app-route-prefetch-policy.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "virtual:vinext-app-browser-entry"
+    ]
+  },
+  "node_modules/vinext/dist/shims/layout-segment-context.js": {
+    "file": "portfolio/_next/static/chunks/layout-segment-context-CW-bIA5J.js",
+    "name": "layout-segment-context",
+    "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-DOKJ5Yo2.js",
+      "virtual:vinext-app-browser-entry",
+      "_framework-Bu-avnMx.js"
+    ]
+  },
+  "node_modules/vinext/dist/shims/streamed-icons.js": {
+    "file": "portfolio/_next/static/chunks/streamed-icons-dywmsvNQ.js",
+    "name": "streamed-icons",
+    "src": "node_modules/vinext/dist/shims/streamed-icons.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-DOKJ5Yo2.js",
+      "_framework-Bu-avnMx.js"
+    ]
+  },
+  "virtual:vinext-app-browser-entry": {
+    "file": "portfolio/_next/static/chunks/index-Cxww-LPn.js",
+    "name": "index",
+    "src": "virtual:vinext-app-browser-entry",
+    "isEntry": true,
+    "imports": [
+      "_rolldown-runtime-DOKJ5Yo2.js",
+      "_framework-Bu-avnMx.js"
+    ],
+    "dynamicImports": [
+      "node_modules/vinext/dist/shims/internal/app-route-prefetch-policy.js",
+      "virtual:vinext-app-browser-entry",
+      "node_modules/vinext/dist/shims/layout-segment-context.js",
+      "node_modules/lucide-react/dist/esm/Icon.mjs",
+      "node_modules/vinext/dist/shims/streamed-icons.js"
+    ]
+  }
+}
