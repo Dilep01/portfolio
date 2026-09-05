@@ -4,7 +4,6 @@ import {
   Award,
   BrainCircuit,
   BriefcaseBusiness,
-  Calendar,
   CheckCircle2,
   Code2,
   Download,
@@ -30,14 +29,14 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['3', 'AI/ML builds'],
+  ['4', 'AI/ML builds'],
   ['2025', 'client award'],
 ];
 
 const skillGroups = [
   {
     index: '01', title: 'Data & modeling', icon: ScanSearch,
-    skills: ['Python', 'pandas', 'NumPy', 'scikit-learn', 'XGBoost', 'LightGBM', 'Feature engineering', 'Model evaluation'],
+    skills: ['Python', 'PyTorch', 'OpenCV', 'pandas', 'NumPy', 'scikit-learn', 'XGBoost', 'LightGBM', 'Feature engineering', 'Model evaluation'],
   },
   {
     index: '02', title: 'Explainability & MLOps', icon: ShieldCheck,
@@ -79,6 +78,15 @@ const projects = [
     flow: ['Stream', 'Features', 'Rules + ML', 'Decision', 'Monitor'],
     href: 'https://github.com/Dilep01/real-time-transaction-fraud-risk-intelligence-platform',
     note: 'Streaming is a timestamp-ordered local replay; no production metrics are claimed.',
+  },
+  {
+    number: '04', label: 'Computer vision · Industrial AI', title: 'Industrial Visual Defect Intelligence Platform',
+    summary: 'A production-oriented inspection platform that combines anomaly localization and typed-defect segmentation with explainable, conservative quality decisions.',
+    highlights: ['PatchCore-Lite anomaly localization and a multi-task ResNet-18 U-Net for known defects', 'Image-quality gates, severity analysis, reason codes, and PASS, REJECT, or MANUAL_REVIEW decisions', 'FastAPI inspection service, operator review workflow, monitoring, Docker support, and 48 automated tests'],
+    tech: ['PyTorch', 'OpenCV', 'PatchCore', 'U-Net', 'FastAPI', 'React', 'Docker', 'MLflow', 'pytest'],
+    flow: ['Capture', 'Validate', 'Localize', 'Decide', 'Monitor'],
+    href: 'https://github.com/Dilep01/industrial-visual-defect-intelligence-platform',
+    note: 'Reference results use VisA PCB4 data and a CPU-oriented demonstration pipeline; production deployment requires site-specific validation.',
   },
 ];
 
@@ -186,7 +194,7 @@ export default function Home() {
         <div className="section-shell">
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Three end-to-end builds that connect models to decisions, interfaces, tests, and operational guardrails.</p>
+            <p>Four end-to-end builds that connect models to decisions, interfaces, tests, and operational guardrails.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
