@@ -1,3 +1,4 @@
+import CinematicMotion from './cinematic-motion';
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -30,14 +31,14 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['3', 'AI/ML builds'],
-  ['2025', 'client award'],
+  ['4', 'AI/ML builds'],
+  ['2025', 'Client Champion Award'],
 ];
 
 const skillGroups = [
   {
     index: '01', title: 'Data & modeling', icon: ScanSearch,
-    skills: ['Python', 'pandas', 'NumPy', 'scikit-learn', 'XGBoost', 'LightGBM', 'Feature engineering', 'Model evaluation'],
+    skills: ['Python', 'pandas', 'NumPy', 'scikit-learn', 'XGBoost', 'LightGBM', 'Feature engineering', 'Model evaluation', 'PyTorch', 'OpenCV', 'MySQL'],
   },
   {
     index: '02', title: 'Explainability & MLOps', icon: ShieldCheck,
@@ -55,7 +56,15 @@ const skillGroups = [
 
 const projects = [
   {
-    number: '01', label: 'Local AI · Memory systems', title: 'Self-Learning AI Agent',
+    number: '01', label: 'Computer vision · Industrial inspection', title: 'Industrial Visual Defect Intelligence',
+    summary: 'An inspection platform that finds anomalies, segments known defects, and turns image evidence into reviewable quality decisions.',
+    highlights: ['PatchCore-Lite anomaly localization and multi-task U-Net segmentation', 'Image-quality gates, severity and reason codes, and PASS / REJECT / MANUAL_REVIEW decisions', 'FastAPI workflows, monitoring, and 48 automated tests'],
+    tech: ['PyTorch', 'OpenCV', 'PatchCore', 'U-Net', 'FastAPI', 'React', 'MLflow', 'Docker'],
+    flow: ['Image', 'Quality gate', 'Detect', 'Segment', 'Decision'],
+    href: 'https://github.com/Dilep01/industrial-visual-defect-intelligence-platform',
+  },
+  {
+    number: '02', label: 'Local AI · Memory systems', title: 'Self-Learning AI Agent',
     summary: 'A privacy-conscious conversational agent that retrieves user-specific long-term memories before every response—without retraining model weights.',
     highlights: ['Local models and embeddings with no required paid cloud API', 'Message-ID provenance validation before durable memory writes', 'User-scoped memory retrieval, listing, deletion, and auditable summaries'],
     tech: ['Python', 'FastAPI', 'Ollama', 'Qwen', 'Mem0', 'Qdrant', 'PostgreSQL', 'Docker'],
@@ -63,7 +72,7 @@ const projects = [
     href: 'https://github.com/Dilep01/self-learning-ai-agent',
   },
   {
-    number: '02', label: 'Fintech · Explainable ML', title: 'Explainable Credit Risk Engine',
+    number: '03', label: 'Fintech · Explainable ML', title: 'Explainable Credit Risk Engine',
     summary: 'An auditable risk-decisioning platform that turns default probability into a 300–850 score and an APPROVE, REFER, or DECLINE recommendation.',
     highlights: ['Ranked SHAP reason codes and plain-English decision explanations', 'Configurable policy thresholds with auditable FastAPI responses', 'Automated tests for training, scoring, and decision logic'],
     tech: ['Python', 'scikit-learn', 'LightGBM', 'SHAP', 'Optuna', 'FastAPI', 'pytest'],
@@ -72,7 +81,7 @@ const projects = [
     note: 'Synthetic demonstration data—not validated for real lending decisions.',
   },
   {
-    number: '03', label: 'Fraud · Risk intelligence', title: 'Transaction Fraud Intelligence Platform',
+    number: '04', label: 'Fraud · Risk intelligence', title: 'Transaction Fraud Intelligence Platform',
     summary: 'An end-to-end fraud platform combining deterministic rules, ML risk scoring, explainability, local streaming replay, and analyst monitoring.',
     highlights: ['50,000-row PaySim-format dataset with 18 behavioral features', 'Compared four models with precision, recall, F1, and PR-AUC', 'SHAP explanations, MLflow tracking, PSI/KS drift checks, and Streamlit dashboard'],
     tech: ['XGBoost', 'LightGBM', 'SHAP', 'MLflow', 'FastAPI', 'Streamlit', 'Docker'],
@@ -85,13 +94,15 @@ const projects = [
 export default function Home() {
   return (
     <main>
+      <a className="skip-link" href="#about">Skip to content</a>
+      <CinematicMotion />
       <nav className="site-nav" aria-label="Primary navigation">
         <a className="wordmark" href="#home" aria-label="Dilep Kumar K — home">DK<span>.</span></a>
         <div className="nav-links">
           {navItems.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
         </div>
         <a className="nav-cta" href="./Dilep_Kumar_K_Resume.docx" download>
-          Résumé <ArrowDownRight size={15} />
+          Resume <ArrowDownRight size={15} />
         </a>
         <details className="mobile-nav">
           <summary aria-label="Toggle navigation"><Menu size={21} /></summary>
@@ -102,11 +113,15 @@ export default function Home() {
       </nav>
 
       <section id="home" className="hero section-shell">
+        <div className="hero-word" aria-hidden="true">{Array.from("DILEP").map((letter, i) => <span key={i} style={{ animationDelay: `${i * 95 + 180}ms` }}>{letter}</span>)}</div>
+        <div className="hero-light" aria-hidden="true" />
+        <div className="hero-caption" aria-hidden="true">CURIOUS MIND. / RELIABLE SYSTEMS.</div>
+        <div className="hero-edition" aria-hidden="true">PORTFOLIO / 2026</div>
         <div className="hero-copy">
-          <p className="eyebrow"><span /> Data science · Machine learning · Explainable AI</p>
-          <h1>I build AI systems people can <em>understand</em> and trust.</h1>
+          <p className="eyebrow"><span /> Dilep Kumar K / Data Science & AI</p>
+          <h1>Turning data<br />into <em>decisions.</em></h1>
           <p className="hero-lede">
-            I’m Dilep Kumar K — a Computer Science graduate and former testing professional building reliable machine-learning systems for credit risk, fraud intelligence, and local AI agents.
+            I build explainable machine-learning systems. From industrial inspection to financial risk and local AI, I care about what a model decides—and why.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#projects">Explore my work <ArrowDownRight size={17} /></a>
@@ -120,15 +135,16 @@ export default function Home() {
         </div>
 
         <div className="portrait-stage">
-          <div className="portrait-frame"><img src="./dilep-photo.jpeg" alt="Portrait of Dilep Kumar K" /></div>
+          <div className="portrait-orbit" aria-hidden="true" /><div className="portrait-halo" aria-hidden="true" /><div className="portrait-frame"><img src="./dilep-photo.jpeg" alt="Portrait of Dilep Kumar K" width={413} height={531} fetchPriority="high" /></div>
           <div className="availability-card">
             <span className="status-dot" />
             <div><strong>Open to opportunities</strong><small><MapPin size={13} /> Mysore, Karnataka</small></div>
           </div>
-          <div className="code-note" aria-hidden="true"><span>focus</span><strong>explainable_ai</strong></div>
+          <div className="code-note" aria-hidden="true"><span>THE APPROACH</span><strong>Build. Test. Explain.</strong></div>
         </div>
       </section>
 
+      <div className="chapter-strip section-shell"><a href="#projects">SCROLL TO EXPLORE <ArrowDownRight size={16} /></a><span>PYTHON / MACHINE LEARNING / COMPUTER VISION</span></div>
       <section className="stat-band section-shell" aria-label="Career highlights">
         {stats.map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}
       </section>
@@ -140,13 +156,14 @@ export default function Home() {
         </div>
         <div className="about-copy">
           <p className="lead-copy">I moved from validating production software to building data products—carrying the same care for evidence, failure modes, and quality into every model.</p>
-          <p>My work sits where machine learning meets accountable engineering: explainable financial-risk decisions, behavior-aware fraud systems, and local AI agents with auditable memory. I’m looking for an entry-level Data Scientist, ML Engineer, or AI Engineer role where dependable execution matters.</p>
+          <p>My work sits where machine learning meets accountable engineering: industrial visual inspection, explainable financial-risk decisions, behavior-aware fraud systems, and local AI agents with auditable memory. I’m looking for an entry-level Data Scientist, ML Engineer, or AI Engineer role where dependable execution matters.</p>
           <blockquote>“Validate assumptions. Measure the right outcomes. Explain every decision.”</blockquote>
         </div>
       </section>
 
       <section id="skills" className="content-section skills-wrap">
         <div className="section-shell">
+          <div className="scene-number" aria-hidden="true">02</div>
           <div className="section-heading">
             <div><p className="section-index">02 / Capabilities</p><h2>From data to a<br />dependable system.</h2></div>
             <p>I work across the full path: explore, model, explain, serve, monitor, and test.</p>
@@ -184,9 +201,10 @@ export default function Home() {
 
       <section id="projects" className="content-section projects-wrap">
         <div className="section-shell">
+          <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Three end-to-end builds that connect models to decisions, interfaces, tests, and operational guardrails.</p>
+            <p>Four end-to-end builds that connect models to decisions, interfaces, tests, and operational guardrails.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
@@ -202,7 +220,8 @@ export default function Home() {
                   <a className="project-link" href={project.href} target="_blank" rel="noreferrer">Explore repository <ArrowUpRight size={17} /></a>
                 </div>
                 <div className="flow-card" aria-label={`${project.title} workflow`}>
-                  <p>System flow</p>
+                  <div className="flow-visual" aria-hidden="true">{project.flow.map((step, i) => <div className="signal-column" key={step} style={{ height: `${35 + ((i * 29 + Number(project.number) * 17) % 65)}%` }}><span /><span /><span /></div>)}</div>
+                  <p>Architecture / {project.number}</p>
                   {project.flow.map((step, index) => (
                     <div className="flow-step" key={step}><span>{String(index + 1).padStart(2, '0')}</span><strong>{step}</strong>{index < project.flow.length - 1 && <i />}</div>
                   ))}
@@ -233,11 +252,11 @@ export default function Home() {
 
       <section id="resume" className="resume-section section-shell">
         <div>
-          <p className="section-index">06 / Résumé</p>
+          <p className="section-index">06 / Resume</p>
           <h2>Want the complete picture?</h2>
           <p>Download a concise overview of my experience, skills, projects, education, and achievements.</p>
         </div>
-        <a className="resume-download" href="./Dilep_Kumar_K_Resume.docx" download><Download size={24} /><span><strong>Download résumé</strong><small>DOCX · Updated 2026</small></span></a>
+        <a className="resume-download" href="./Dilep_Kumar_K_Resume.docx" download><Download size={24} /><span><strong>Download resume</strong><small>DOCX · Updated 2026</small></span></a>
       </section>
 
       <section id="contact" className="contact-section">
