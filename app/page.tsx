@@ -31,7 +31,7 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['4', 'AI/ML builds'],
+  ['5', 'AI/ML builds'],
   ['2025', 'Client Champion Award'],
 ];
 
@@ -88,6 +88,15 @@ const projects = [
     flow: ['Stream', 'Features', 'Rules + ML', 'Decision', 'Monitor'],
     href: 'https://github.com/Dilep01/real-time-transaction-fraud-risk-intelligence-platform',
     note: 'Streaming is a timestamp-ordered local replay; no production metrics are claimed.',
+  },
+  {
+    number: '05', label: 'Job discovery · Browser automation', title: 'CareerPilot',
+    summary: 'A local job discovery and application assistant that matches Naukri roles to a resume, monitors fresh listings, and safely attempts eligible applications. No cloud service or API key is required.',
+    highlights: ['Transparent title, skill, location, experience, and freshness checks before a job is considered eligible', 'Playwright application workflow with persistent deduplication, daily attempt limits, and manual review for uncertain outcomes', 'Local browser dashboard, SQLite history, privacy safeguards, and 27 automated tests'],
+    tech: ['Node.js', 'JavaScript', 'Playwright', 'SQLite', 'HTML', 'CSS', 'Node test runner'],
+    flow: ['Resume', 'Discover', 'Match', 'Apply', 'Confirm'],
+    href: 'https://github.com/Dilep01/careerpilot-ai-job-application-agent',
+    note: 'Built for personal Naukri use; CAPTCHA, screening questions, and external applications remain user-controlled.',
   },
 ];
 
@@ -204,7 +213,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Four end-to-end builds that connect models to decisions, interfaces, tests, and operational guardrails.</p>
+            <p>Five end-to-end builds that connect models and automation to decisions, interfaces, tests, and operational guardrails.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
