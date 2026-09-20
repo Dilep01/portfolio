@@ -5,7 +5,6 @@ import {
   Award,
   BrainCircuit,
   BriefcaseBusiness,
-  Calendar,
   CheckCircle2,
   Code2,
   Download,
@@ -31,7 +30,7 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['5', 'AI/ML builds'],
+  ['6', 'AI/ML builds'],
   ['2025', 'Client Champion Award'],
 ];
 
@@ -97,6 +96,15 @@ const projects = [
     flow: ['Resume', 'Discover', 'Match', 'Apply', 'Confirm'],
     href: 'https://github.com/Dilep01/careerpilot-ai-job-application-agent',
     note: 'Built for personal Naukri use; CAPTCHA, screening questions, and external applications remain user-controlled.',
+  },
+  {
+    number: '06', label: 'GenAI · Incident intelligence', title: 'IntegrationOps AI',
+    summary: 'An evidence-grounded copilot that investigates enterprise API and integration failures with hybrid retrieval, controlled agent workflows, and reviewable citations.',
+    highlights: ['LangGraph workflow combining access-controlled Qdrant retrieval with incident-specific, read-only operational tools', 'Evidence-linked hypotheses, citation validation, structured output, secret redaction, and fail-closed grounding checks', 'Four-eyes remediation approval, durable audit events, and 45 passing tests with 91.80% Python coverage'],
+    tech: ['Python', 'FastAPI', 'LangGraph', 'Qdrant', 'Ollama', 'React', 'PostgreSQL', 'Docker'],
+    flow: ['Incident', 'Retrieve', 'Investigate', 'Validate', 'Approve'],
+    href: 'https://github.com/Dilep01/integrationops-ai-enterprise-incident-intelligence-copilot',
+    note: 'Uses synthetic evidence, mock operational tools, and a local remediation simulator; benchmark results are not production accuracy.',
   },
 ];
 
@@ -213,7 +221,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Five end-to-end builds that connect models and automation to decisions, interfaces, tests, and operational guardrails.</p>
+            <p>Six end-to-end builds that connect models and automation to decisions, interfaces, tests, and operational guardrails.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
