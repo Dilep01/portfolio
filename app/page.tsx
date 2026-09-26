@@ -30,14 +30,14 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['6', 'AI/ML builds'],
+  ['7', 'data & AI builds'],
   ['2025', 'Client Champion Award'],
 ];
 
 const skillGroups = [
   {
     index: '01', title: 'Data & modeling', icon: ScanSearch,
-    skills: ['Python', 'pandas', 'NumPy', 'scikit-learn', 'XGBoost', 'LightGBM', 'Feature engineering', 'Model evaluation', 'PyTorch', 'OpenCV', 'MySQL'],
+    skills: ['Python', 'pandas', 'NumPy', 'Power BI', 'DAX', 'Power Query', 'scikit-learn', 'XGBoost', 'LightGBM', 'Feature engineering', 'Model evaluation', 'PyTorch', 'OpenCV', 'MySQL'],
   },
   {
     index: '02', title: 'Explainability & MLOps', icon: ShieldCheck,
@@ -105,6 +105,15 @@ const projects = [
     flow: ['Incident', 'Retrieve', 'Investigate', 'Validate', 'Approve'],
     href: 'https://github.com/Dilep01/integrationops-ai-enterprise-incident-intelligence-copilot',
     note: 'Uses synthetic evidence, mock operational tools, and a local remediation simulator; benchmark results are not production accuracy.',
+  },
+  {
+    number: '07', label: 'Business intelligence · Integration reliability', title: 'IntegraPulse',
+    summary: 'A Power BI report for investigating transaction failures, retries, incidents, and SLA performance across simulated enterprise integrations.',
+    highlights: ['Five report pages, including transaction drill-through to attempt and status-event history', '2 million synthetic transactions modeled across 18 tables with 51 DAX measures', '461 sample checks and 44 portfolio-scale DAX checks passed; separate SQL staging reconciled on the release sample'],
+    tech: ['Power BI', 'DAX', 'Power Query', 'SQL', 'Node.js'],
+    flow: ['Synthetic CSV', 'Power Query', 'Semantic model', 'DAX', 'Report'],
+    href: 'https://github.com/Dilep01/integrapulse_enterprise_transaction_and_integration_reliability_intelligence',
+    note: 'Deterministic synthetic data and a local Power BI Desktop report; no live bank or ERP connections.',
   },
 ];
 
@@ -221,7 +230,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Six end-to-end builds that connect models and automation to decisions, interfaces, tests, and operational guardrails.</p>
+            <p>Seven data and AI projects spanning analytics, models, automation, tests, and operational guardrails.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
