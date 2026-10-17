@@ -30,7 +30,7 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['7', 'data & AI builds'],
+  ['8', 'data & AI builds'],
   ['2025', 'Client Champion Award'],
 ];
 
@@ -114,6 +114,15 @@ const projects = [
     flow: ['Synthetic CSV', 'Power Query', 'Semantic model', 'DAX', 'Report'],
     href: 'https://github.com/Dilep01/integrapulse_enterprise_transaction_and_integration_reliability_intelligence',
     note: 'Deterministic synthetic data and a local Power BI Desktop report; no live bank or ERP connections.',
+  },
+  {
+    number: '08', label: 'Graph ML · Fraud investigation', title: 'GraphShield AI',
+    summary: 'A local fraud-investigation prototype combining historical transaction scoring, graph-based group ranking, and an analyst dashboard for reviewing connected accounts and transfer evidence.',
+    highlights: ['20 historical transaction features and five learned group rankers, including Node2Vec + LightGBM and GraphSAGE, compared with graph-rule baselines', 'Versioned FastAPI scoring, resumable batch replay, duplicate suppression, and case reviews with traceable evidence', 'Local health monitoring, reproducible offline packaging, and 96 tests recorded in release verification'],
+    tech: ['Python', 'LightGBM', 'Node2Vec', 'GraphSAGE', 'PyTorch', 'DuckDB', 'FastAPI', 'pytest'],
+    flow: ['Transactions', 'Historical graph', 'Rank groups', 'Review cases', 'Monitor'],
+    href: 'https://github.com/Dilep01/GraphShield-AI',
+    note: 'Synthetic evaluation only. The selected learned ranker did not beat repeated-transfer rules on case precision or recall, and the pipeline missed all withheld relay-chain groups.',
   },
 ];
 
@@ -230,7 +239,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Seven data and AI projects spanning analytics, models, automation, tests, and operational guardrails.</p>
+            <p>Eight data and AI projects spanning analytics, models, automation, tests, and operational guardrails.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
