@@ -30,7 +30,7 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['8', 'data & AI builds'],
+  ['9', 'data & AI builds'],
   ['2025', 'Client Champion Award'],
 ];
 
@@ -123,6 +123,15 @@ const projects = [
     flow: ['Transactions', 'Historical graph', 'Rank groups', 'Review cases', 'Monitor'],
     href: 'https://github.com/Dilep01/GraphShield-AI',
     note: 'Synthetic evaluation only. The selected learned ranker did not beat repeated-transfer rules on case precision or recall, and the pipeline missed all withheld relay-chain groups.',
+  },
+  {
+    number: '09', label: 'Computer vision · Workplace safety', title: 'VisualGuard AI',
+    summary: 'A local PPE-analysis prototype for images and recorded video, with person tracking, reviewable possible-missing-helmet alerts, and a workplace-safety analytics dashboard.',
+    highlights: ['YOLO detection, IoU person tracking, and equipment association with unknown states for ambiguous observations', 'Temporal alert deduplication, annotated media, and saved review decisions in a Streamlit dashboard', 'FastAPI uploads, a durable video-job queue with worker recovery, and separate synthetic-demo and uploaded-footage analytics'],
+    tech: ['Python', 'YOLO', 'OpenCV', 'FastAPI', 'Streamlit', 'SQLAlchemy', 'SQLite', 'pytest'],
+    flow: ['Image / video', 'Detect PPE', 'Track people', 'Flag candidates', 'Review'],
+    href: 'https://github.com/Dilep01/visualguard-ai',
+    note: 'Local prototype; real uploads require separately supplied model weights. The v3 detector found 21 of 68 uncovered heads on 216 validation images, with 7 false detections. Real-video accuracy remains unverified.',
   },
 ];
 
@@ -239,7 +248,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Eight data and AI projects spanning analytics, models, automation, tests, and operational guardrails.</p>
+            <p>Nine data and AI projects spanning analytics, models, automation, tests, and operational guardrails.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
