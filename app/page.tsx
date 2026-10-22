@@ -30,7 +30,7 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['9', 'data & AI builds'],
+  ['10', 'data & AI builds'],
   ['2025', 'Client Champion Award'],
 ];
 
@@ -132,6 +132,15 @@ const projects = [
     flow: ['Image / video', 'Detect PPE', 'Track people', 'Flag candidates', 'Review'],
     href: 'https://github.com/Dilep01/visualguard-ai',
     note: 'Local prototype; real uploads require separately supplied model weights. The v3 detector found 21 of 68 uncovered heads on 216 validation images, with 7 false detections. Real-video accuracy remains unverified.',
+  },
+  {
+    number: '10', label: 'Graph ML · Identity risk', title: 'IdentityGraph AI',
+    summary: 'A local research prototype for investigating simulated account takeover and synthetic identity risk using historical relationship features, two risk scores, and an investigator dashboard.',
+    highlights: ['Point-in-time account, device, network, and attribute history, with relationship-feature LightGBM serving both risk scores', 'Node2Vec, GraphSAGE, RGCN, and GAT evaluated offline against conventional baselines using chronological and cold-start splits', 'FastAPI event replay, SQLite persistence, duplicate-event handling, relationship exploration, and case export'],
+    tech: ['Python', 'LightGBM', 'PyTorch Geometric', 'Node2Vec', 'NetworkX', 'FastAPI', 'SQLite', 'pytest'],
+    flow: ['Login event', 'Historical links', 'Score risks', 'Review evidence', 'Save case'],
+    href: 'https://github.com/Dilep01/identitygraph-ai',
+    note: 'Synthetic evaluation on 240 fictional accounts and 6,494 authentication events. Both held-out takeover families were missed at the selected threshold; scores are not real-world compromise probabilities.',
   },
 ];
 
@@ -248,7 +257,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Nine data and AI projects spanning analytics, models, automation, tests, and operational guardrails.</p>
+            <p>Ten data and AI projects spanning analytics, models, automation, tests, and operational guardrails.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
