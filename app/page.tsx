@@ -30,7 +30,7 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['10', 'data & AI builds'],
+  ['11', 'portfolio projects'],
   ['2025', 'Client Champion Award'],
 ];
 
@@ -141,6 +141,15 @@ const projects = [
     flow: ['Login event', 'Historical links', 'Score risks', 'Review evidence', 'Save case'],
     href: 'https://github.com/Dilep01/identitygraph-ai',
     note: 'Synthetic evaluation on 240 fictional accounts and 6,494 authentication events. Both held-out takeover families were missed at the selected threshold; scores are not real-world compromise probabilities.',
+  },
+  {
+    number: '11', label: 'Personal finance · Local-first application', title: 'SpendTrail',
+    summary: 'A local budgeting and expense tracker for Windows with a React dashboard and Android capture companion. It reserves bills, savings, and a safety buffer before calculating everyday spending pace.',
+    highlights: ['Python ledger tracks bank, cash, wallet, and credit-card activity with explicit rules to avoid counting purchases twice', 'Supported SMS and payment notifications enter an encrypted phone queue, sync over private Wi-Fi with TLS, and require review before recording', 'Bank CSV preview and reconciliation, linked refunds, cycle history, and encrypted backup and recovery'],
+    tech: ['Python', 'FastAPI', 'SQLite', 'React', 'Kotlin', 'Jetpack Compose', 'pytest'],
+    flow: ['Capture alert', 'Encrypted queue', 'Private Wi-Fi', 'Review', 'Record expense'],
+    href: 'https://github.com/Dilep01/spendtrail',
+    note: 'Single-user local release candidate; repeated real-device and background capture testing remains pending. No direct bank/UPI connection or cloud sync; automatic SMS support is limited to the supported ICICIT format.',
   },
 ];
 
@@ -257,7 +266,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Ten data and AI projects spanning analytics, models, automation, tests, and operational guardrails.</p>
+            <p>Eleven projects spanning data and AI, analytics, automation, and local applications.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
