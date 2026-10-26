@@ -30,7 +30,7 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['11', 'portfolio projects'],
+  ['12', 'portfolio projects'],
   ['2025', 'Client Champion Award'],
 ];
 
@@ -151,6 +151,15 @@ const projects = [
     href: 'https://github.com/Dilep01/spendtrail',
     note: 'Single-user local release candidate; repeated real-device and background capture testing remains pending. No direct bank/UPI connection or cloud sync; automatic SMS support is limited to the supported ICICIT format.',
   },
+  {
+    number: '12', label: 'Python full-stack · Incident investigation', title: 'Enterprise Incident Investigation & Resolution Copilot',
+    summary: 'A local incident investigation application that collects evidence, retrieves published runbooks, and coordinates rule-based findings through LangGraph, with human review before remediation or manual closure.',
+    highlights: ['Persisted investigation checkpoints, evidence citations, versioned keyword retrieval, and bounded read-only diagnostic checks', 'Exact-action approvals, stale-evidence checks, idempotent fault-lab recovery, and separate-author review for runbook publication and manual closure', 'Independent lab health and checkout verification, audit trails, Markdown reports, and 79 backend regression tests recorded in release validation'],
+    tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'LangGraph', 'SQLAlchemy', 'SQLite', 'pytest'],
+    flow: ['Evidence', 'Investigate', 'Review', 'Remediate', 'Verify'],
+    href: 'https://github.com/Dilep01/enterprise-incident-copilot',
+    note: 'Local demonstration using rules and keyword search; no LLM or semantic RAG. Automated remediation targets only the isolated synthetic fault lab. Docker, PostgreSQL integration, and production incident accuracy remain unverified.',
+  },
 ];
 
 export default function Home() {
@@ -266,7 +275,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Eleven projects spanning data and AI, analytics, automation, and local applications.</p>
+            <p>Twelve projects spanning data and AI, analytics, automation, and local applications.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
