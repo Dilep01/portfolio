@@ -30,7 +30,7 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['12', 'portfolio projects'],
+  ['14', 'portfolio projects'],
   ['2025', 'Client Champion Award'],
 ];
 
@@ -160,6 +160,24 @@ const projects = [
     href: 'https://github.com/Dilep01/enterprise-incident-copilot',
     note: 'Local demonstration using rules and keyword search; no LLM or semantic RAG. Automated remediation targets only the isolated synthetic fault lab. Docker, PostgreSQL integration, and production incident accuracy remain unverified.',
   },
+  {
+    number: '13', label: 'Document intelligence · Invoice automation', title: 'DocuMind AI',
+    summary: 'A local document-processing and invoice-review application that extracts PDF text, applies OCR to scanned pages, and links extracted fields to source evidence for human review.',
+    highlights: ['PDF and image uploads with durable processing jobs, retries, and preserved originals', 'Versioned invoice corrections, role-based review, and current-revision approval required before accounting export', 'Keyword search with optional local semantic search and cited document Q&A through Ollama; no paid API key required'],
+    tech: ['Python', 'FastAPI', 'PostgreSQL', 'Tesseract OCR', 'React', 'Ollama', 'Docker'],
+    flow: ['Upload', 'Extract / OCR', 'Review', 'Approve', 'Export'],
+    href: 'https://github.com/Dilep01/documind-ai',
+    note: 'Local portfolio application validated with fictional documents and synthetic text datasets. OCR fields and tables may need correction; local AI Q&A is experimental. Real-invoice accuracy and production reliability are not established.',
+  },
+  {
+    number: '14', label: 'Retail analytics · Forecasting & inventory planning', title: 'RetailIQ',
+    summary: 'A local Python/Django application that turns validated sales data into SKU-level forecasts, explained replenishment proposals, and inventory-policy comparisons.',
+    highlights: ['Validated CSV imports and 28-day seasonal-naive and gradient-boosting forecasts, compared through chronological backtests and a separate historical holdout', 'Safety-stock and replenishment calculations with pack sizes, minimum order quantities, integer budget allocation, and CSV exports', 'Matched inventory simulations with budget and delivery-delay scenarios, plus a durable job queue and audit trail'],
+    tech: ['Python', 'Django', 'pandas', 'scikit-learn', 'SciPy', 'SQLite', 'Waitress', 'pytest'],
+    flow: ['Validate sales', 'Backtest', 'Forecast', 'Plan inventory', 'Simulate'],
+    href: 'https://github.com/Dilep01/retailiq',
+    note: 'Single-planner local portfolio application evaluated on synthetic data and a 20-product UCI Online Retail cohort. Public-data forecast errors remain substantial. Inventory outcomes are simulations with assumed costs and supplier inputs; no live savings or stockout reductions are established.',
+  },
 ];
 
 export default function Home() {
@@ -275,7 +293,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Twelve projects spanning data and AI, analytics, automation, and local applications.</p>
+            <p>Fourteen projects spanning data and AI, analytics, automation, and local applications.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
