@@ -30,7 +30,7 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['16', 'portfolio projects'],
+  ['17', 'portfolio projects'],
   ['2025', 'Client Champion Award'],
 ];
 
@@ -196,6 +196,15 @@ const projects = [
     href: 'https://github.com/Dilep01/digital-banking-ledger-reconciliation',
     note: 'Local portfolio simulation using synthetic identities, statements, and money. No bank, UPI, card-network, or real-payment connections; local checks do not establish production capacity or regulatory compliance.',
   },
+  {
+    number: '17', label: 'Java full-stack · IT service management', title: 'Multi-Tenant IT Service Desk & SLA Management SaaS',
+    summary: 'A local Java/React service desk for organizations to manage incidents and service requests, route work to support teams, and track response and resolution deadlines with tenant-scoped access.',
+    highlights: ['Role- and team-based ticket access, assignment, public replies, internal notes, approvals, and resolution/reopening history', 'Versioned SLA policies with business calendars, holidays, pause/resume, warnings and escalations; durable notifications and an email outbox', 'Search, knowledge articles, attachments, audit history, and workload/SLA reports; recorded local verification includes 42 backend tests and four browser acceptance tests on native and Docker stacks'],
+    tech: ['Java 21', 'Spring Boot', 'Spring Security', 'PostgreSQL', 'React', 'TypeScript', 'Docker', 'Playwright'],
+    flow: ['Submit ticket', 'Route team', 'Track SLA', 'Resolve', 'Confirm / reopen'],
+    href: 'https://github.com/Dilep01/service-desk-sla',
+    note: 'Local portfolio application with synthetic demo organizations and a local email inbox. No public app deployment or production SLA is claimed; email delivery can duplicate after a crash, and multi-instance sessions require sticky routing.',
+  },
 ];
 
 export default function Home() {
@@ -311,7 +320,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Sixteen projects spanning data and AI, analytics, automation, and full-stack applications.</p>
+            <p>Seventeen projects spanning data and AI, analytics, automation, and full-stack applications.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
