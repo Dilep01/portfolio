@@ -30,7 +30,7 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['14', 'portfolio projects'],
+  ['15', 'portfolio projects'],
   ['2025', 'Client Champion Award'],
 ];
 
@@ -178,6 +178,16 @@ const projects = [
     href: 'https://github.com/Dilep01/retailiq',
     note: 'Single-planner local portfolio application evaluated on synthetic data and a 20-product UCI Online Retail cohort. Public-data forecast errors remain substantial. Inventory outcomes are simulations with assumed costs and supplier inputs; no live savings or stockout reductions are established.',
   },
+  {
+    number: '15', label: 'Java full-stack · Distributed inventory & orders', title: 'Stockflow — Distributed Inventory & Order Management Platform',
+    summary: 'A local multi-warehouse application for stock reservations, split orders, fulfillment, partial returns, and warehouse transfers, with a React workspace for customers, operators, and administrators.',
+    highlights: ['PostgreSQL row locks, idempotent checkout, and an inventory ledger coordinate stock allocation across warehouses', 'Six Spring Boot service roles with separate database ownership, Kafka outbox/inbox delivery, bounded retries, dead letters, and replay', 'Recorded local verification includes 31 backend integration tests and 100 concurrent checkouts competing for 10 units, with no overselling observed'],
+    tech: ['Java 21', 'Spring Boot', 'Spring JDBC', 'React', 'TypeScript', 'PostgreSQL', 'Kafka', 'Redis', 'Docker'],
+    flow: ['Checkout', 'Reserve stock', 'Split / fulfill', 'Deliver / return', 'Reconcile'],
+    href: 'https://github.com/Dilep01/stockflow',
+    note: 'Local portfolio simulation with synthetic data, shipping, and refunds. Service processes share one build artifact; one PostgreSQL host and one Kafka broker do not establish multi-host availability or production capacity.',
+  },
+
 ];
 
 export default function Home() {
@@ -293,7 +303,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Fourteen projects spanning data and AI, analytics, automation, and local applications.</p>
+            <p>Fifteen projects spanning data and AI, analytics, automation, and full-stack applications.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
