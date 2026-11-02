@@ -30,7 +30,7 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['15', 'portfolio projects'],
+  ['16', 'portfolio projects'],
   ['2025', 'Client Champion Award'],
 ];
 
@@ -187,7 +187,15 @@ const projects = [
     href: 'https://github.com/Dilep01/stockflow',
     note: 'Local portfolio simulation with synthetic data, shipping, and refunds. Service processes share one build artifact; one PostgreSQL host and one Kafka broker do not establish multi-host availability or production capacity.',
   },
-
+  {
+    number: '16', label: 'Java full-stack · Banking ledger & reconciliation', title: 'Digital Banking Ledger & Transaction Reconciliation System',
+    summary: 'A local Java/React application for simulated internal transfers, double-entry bookkeeping, account history, statement reconciliation, and reviewed full reversals with traceable audit evidence.',
+    highlights: ['Exact INR amounts, balanced journals enforced at database commit, ordered account locks, and idempotent transfers', 'CSV statement matching with preserved source evidence, versioned reconciliation runs, and separate maker/approver roles for reversals', 'Durable scheduled transfers and outbox delivery; recorded local verification includes 62 backend tests, 7 frontend tests, two-instance recovery, and backup restoration'],
+    tech: ['Java 21', 'Spring Boot', 'Spring Security', 'Spring JDBC', 'PostgreSQL', 'React', 'TypeScript', 'Playwright'],
+    flow: ['Review transfer', 'Post journal', 'Match statement', 'Investigate', 'Approve reversal'],
+    href: 'https://github.com/Dilep01/digital-banking-ledger-reconciliation',
+    note: 'Local portfolio simulation using synthetic identities, statements, and money. No bank, UPI, card-network, or real-payment connections; local checks do not establish production capacity or regulatory compliance.',
+  },
 ];
 
 export default function Home() {
@@ -303,7 +311,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Fifteen projects spanning data and AI, analytics, automation, and full-stack applications.</p>
+            <p>Sixteen projects spanning data and AI, analytics, automation, and full-stack applications.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
