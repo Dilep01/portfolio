@@ -30,7 +30,7 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['17', 'portfolio projects'],
+  ['14', 'portfolio projects'],
   ['2025', 'Client Champion Award'],
 ];
 
@@ -178,33 +178,6 @@ const projects = [
     href: 'https://github.com/Dilep01/retailiq',
     note: 'Single-planner local portfolio application evaluated on synthetic data and a 20-product UCI Online Retail cohort. Public-data forecast errors remain substantial. Inventory outcomes are simulations with assumed costs and supplier inputs; no live savings or stockout reductions are established.',
   },
-  {
-    number: '15', label: 'Java full-stack · Distributed inventory & orders', title: 'Stockflow — Distributed Inventory & Order Management Platform',
-    summary: 'A local multi-warehouse application for stock reservations, split orders, fulfillment, partial returns, and warehouse transfers, with a React workspace for customers, operators, and administrators.',
-    highlights: ['PostgreSQL row locks, idempotent checkout, and an inventory ledger coordinate stock allocation across warehouses', 'Six Spring Boot service roles with separate database ownership, Kafka outbox/inbox delivery, bounded retries, dead letters, and replay', 'Recorded local verification includes 31 backend integration tests and 100 concurrent checkouts competing for 10 units, with no overselling observed'],
-    tech: ['Java 21', 'Spring Boot', 'Spring JDBC', 'React', 'TypeScript', 'PostgreSQL', 'Kafka', 'Redis', 'Docker'],
-    flow: ['Checkout', 'Reserve stock', 'Split / fulfill', 'Deliver / return', 'Reconcile'],
-    href: 'https://github.com/Dilep01/stockflow',
-    note: 'Local portfolio simulation with synthetic data, shipping, and refunds. Service processes share one build artifact; one PostgreSQL host and one Kafka broker do not establish multi-host availability or production capacity.',
-  },
-  {
-    number: '16', label: 'Java full-stack · Banking ledger & reconciliation', title: 'Digital Banking Ledger & Transaction Reconciliation System',
-    summary: 'A local Java/React application for simulated internal transfers, double-entry bookkeeping, account history, statement reconciliation, and reviewed full reversals with traceable audit evidence.',
-    highlights: ['Exact INR amounts, balanced journals enforced at database commit, ordered account locks, and idempotent transfers', 'CSV statement matching with preserved source evidence, versioned reconciliation runs, and separate maker/approver roles for reversals', 'Durable scheduled transfers and outbox delivery; recorded local verification includes 62 backend tests, 7 frontend tests, two-instance recovery, and backup restoration'],
-    tech: ['Java 21', 'Spring Boot', 'Spring Security', 'Spring JDBC', 'PostgreSQL', 'React', 'TypeScript', 'Playwright'],
-    flow: ['Review transfer', 'Post journal', 'Match statement', 'Investigate', 'Approve reversal'],
-    href: 'https://github.com/Dilep01/digital-banking-ledger-reconciliation',
-    note: 'Local portfolio simulation using synthetic identities, statements, and money. No bank, UPI, card-network, or real-payment connections; local checks do not establish production capacity or regulatory compliance.',
-  },
-  {
-    number: '17', label: 'Java full-stack · IT service management', title: 'Multi-Tenant IT Service Desk & SLA Management SaaS',
-    summary: 'A local Java/React service desk for organizations to manage incidents and service requests, route work to support teams, and track response and resolution deadlines with tenant-scoped access.',
-    highlights: ['Role- and team-based ticket access, assignment, public replies, internal notes, approvals, and resolution/reopening history', 'Versioned SLA policies with business calendars, holidays, pause/resume, warnings and escalations; durable notifications and an email outbox', 'Search, knowledge articles, attachments, audit history, and workload/SLA reports; recorded local verification includes 42 backend tests and four browser acceptance tests on native and Docker stacks'],
-    tech: ['Java 21', 'Spring Boot', 'Spring Security', 'PostgreSQL', 'React', 'TypeScript', 'Docker', 'Playwright'],
-    flow: ['Submit ticket', 'Route team', 'Track SLA', 'Resolve', 'Confirm / reopen'],
-    href: 'https://github.com/Dilep01/service-desk-sla',
-    note: 'Local portfolio application with synthetic demo organizations and a local email inbox. No public app deployment or production SLA is claimed; email delivery can duplicate after a crash, and multi-instance sessions require sticky routing.',
-  },
 ];
 
 export default function Home() {
@@ -254,7 +227,7 @@ export default function Home() {
           <div className="portrait-orbit" aria-hidden="true" /><div className="portrait-halo" aria-hidden="true" /><div className="portrait-frame"><img src="./dilep-photo.jpeg" alt="Portrait of Dilep Kumar K" width={413} height={531} fetchPriority="high" /></div>
           <div className="availability-card">
             <span className="status-dot" />
-            <div><strong>Open to opportunities</strong><small><MapPin size={13} /> Mysore, Karnataka</small></div>
+            <div><strong>Open to opportunities</strong><small><MapPin size={13} /> Bengaluru, Karnataka</small></div>
           </div>
           <div className="code-note" aria-hidden="true"><span>THE APPROACH</span><strong>Build. Test. Explain.</strong></div>
         </div>
@@ -320,7 +293,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Seventeen projects spanning data and AI, analytics, automation, and full-stack applications.</p>
+            <p>Fourteen projects spanning data and AI, analytics, automation, and Python full-stack applications.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
@@ -384,7 +357,7 @@ export default function Home() {
           <div className="contact-links">
             <a href="https://github.com/Dilep01" target="_blank" rel="noreferrer"><Code2 size={18} /> GitHub</a>
             <a href="https://www.linkedin.com/in/dilep-kumar-k-a70449245" target="_blank" rel="noreferrer"><BriefcaseBusiness size={18} /> LinkedIn</a>
-            <span><MapPin size={18} /> Mysore, Karnataka</span>
+            <span><MapPin size={18} /> Bengaluru, Karnataka</span>
           </div>
           <footer><span>© 2026 Dilep Kumar K</span><a href="#home">Back to top <ArrowUpRight size={14} /></a></footer>
         </div>
