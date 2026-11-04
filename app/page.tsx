@@ -30,7 +30,7 @@ export const dynamic = 'force-static';
 const stats = [
   ['100+', 'test cases'],
   ['8', 'releases'],
-  ['14', 'portfolio projects'],
+  ['10', 'portfolio projects'],
   ['2025', 'Client Champion Award'],
 ];
 
@@ -142,42 +142,7 @@ const projects = [
     href: 'https://github.com/Dilep01/identitygraph-ai',
     note: 'Synthetic evaluation on 240 fictional accounts and 6,494 authentication events. Both held-out takeover families were missed at the selected threshold; scores are not real-world compromise probabilities.',
   },
-  {
-    number: '11', label: 'Personal finance · Local-first application', title: 'SpendTrail',
-    summary: 'A local budgeting and expense tracker for Windows with a React dashboard and Android capture companion. It reserves bills, savings, and a safety buffer before calculating everyday spending pace.',
-    highlights: ['Python ledger tracks bank, cash, wallet, and credit-card activity with explicit rules to avoid counting purchases twice', 'Supported SMS and payment notifications enter an encrypted phone queue, sync over private Wi-Fi with TLS, and require review before recording', 'Bank CSV preview and reconciliation, linked refunds, cycle history, and encrypted backup and recovery'],
-    tech: ['Python', 'FastAPI', 'SQLite', 'React', 'Kotlin', 'Jetpack Compose', 'pytest'],
-    flow: ['Capture alert', 'Encrypted queue', 'Private Wi-Fi', 'Review', 'Record expense'],
-    href: 'https://github.com/Dilep01/spendtrail',
-    note: 'Single-user local release candidate; repeated real-device and background capture testing remains pending. No direct bank/UPI connection or cloud sync; automatic SMS support is limited to the supported ICICIT format.',
-  },
-  {
-    number: '12', label: 'Python full-stack · Incident investigation', title: 'Enterprise Incident Investigation & Resolution Copilot',
-    summary: 'A local incident investigation application that collects evidence, retrieves published runbooks, and coordinates rule-based findings through LangGraph, with human review before remediation or manual closure.',
-    highlights: ['Persisted investigation checkpoints, evidence citations, versioned keyword retrieval, and bounded read-only diagnostic checks', 'Exact-action approvals, stale-evidence checks, idempotent fault-lab recovery, and separate-author review for runbook publication and manual closure', 'Independent lab health and checkout verification, audit trails, Markdown reports, and 79 backend regression tests recorded in release validation'],
-    tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'LangGraph', 'SQLAlchemy', 'SQLite', 'pytest'],
-    flow: ['Evidence', 'Investigate', 'Review', 'Remediate', 'Verify'],
-    href: 'https://github.com/Dilep01/enterprise-incident-copilot',
-    note: 'Local demonstration using rules and keyword search; no LLM or semantic RAG. Automated remediation targets only the isolated synthetic fault lab. Docker, PostgreSQL integration, and production incident accuracy remain unverified.',
-  },
-  {
-    number: '13', label: 'Document intelligence · Invoice automation', title: 'DocuMind AI',
-    summary: 'A local document-processing and invoice-review application that extracts PDF text, applies OCR to scanned pages, and links extracted fields to source evidence for human review.',
-    highlights: ['PDF and image uploads with durable processing jobs, retries, and preserved originals', 'Versioned invoice corrections, role-based review, and current-revision approval required before accounting export', 'Keyword search with optional local semantic search and cited document Q&A through Ollama; no paid API key required'],
-    tech: ['Python', 'FastAPI', 'PostgreSQL', 'Tesseract OCR', 'React', 'Ollama', 'Docker'],
-    flow: ['Upload', 'Extract / OCR', 'Review', 'Approve', 'Export'],
-    href: 'https://github.com/Dilep01/documind-ai',
-    note: 'Local portfolio application validated with fictional documents and synthetic text datasets. OCR fields and tables may need correction; local AI Q&A is experimental. Real-invoice accuracy and production reliability are not established.',
-  },
-  {
-    number: '14', label: 'Retail analytics · Forecasting & inventory planning', title: 'RetailIQ',
-    summary: 'A local Python/Django application that turns validated sales data into SKU-level forecasts, explained replenishment proposals, and inventory-policy comparisons.',
-    highlights: ['Validated CSV imports and 28-day seasonal-naive and gradient-boosting forecasts, compared through chronological backtests and a separate historical holdout', 'Safety-stock and replenishment calculations with pack sizes, minimum order quantities, integer budget allocation, and CSV exports', 'Matched inventory simulations with budget and delivery-delay scenarios, plus a durable job queue and audit trail'],
-    tech: ['Python', 'Django', 'pandas', 'scikit-learn', 'SciPy', 'SQLite', 'Waitress', 'pytest'],
-    flow: ['Validate sales', 'Backtest', 'Forecast', 'Plan inventory', 'Simulate'],
-    href: 'https://github.com/Dilep01/retailiq',
-    note: 'Single-planner local portfolio application evaluated on synthetic data and a 20-product UCI Online Retail cohort. Public-data forecast errors remain substantial. Inventory outcomes are simulations with assumed costs and supplier inputs; no live savings or stockout reductions are established.',
-  },
+
 ];
 
 export default function Home() {
@@ -293,7 +258,7 @@ export default function Home() {
           <div className="scene-number" aria-hidden="true">04</div>
           <div className="section-heading project-heading">
             <div><p className="section-index">04 / Selected work</p><h2>Built beyond<br />the notebook.</h2></div>
-            <p>Fourteen projects spanning data and AI, analytics, automation, and Python full-stack applications.</p>
+            <p>Ten projects spanning data science, AI, analytics, and automation.</p>
           </div>
           <div className="projects-list">
             {projects.map((project) => (
